@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title></title>
+		<h1>Temperature Conversion</h1>
+	</head>
+		<body>
+			
+			<fieldset>
+				<legend>Temperature Input</legend>
+					<label for="input"><input id = "enteredAmount" type="number" name="Enter temperature and press 'Enter' key" value="0"></label></br>
+			</fieldset>
+
+			<fieldset class="tempChoice">
+				<legend>Convert to:</legend>
+					<label for"temperature"><input id="f" type="radio" name="temperature" value="F">Fahrenheit</label></br>						
+					<label for"temperature"><input id="c" type="radio" name="temperature" value="C">Celsius</label></br>
+			</fieldset>
+
+			<fieldset class="tempResult">
+      			<legend>Converted Temperature</legend>
+					<label for"result"><input id = "output" type="number" name="result" value="number"></label>	    
+    		</fieldset>  
+
+    		<fieldset class="convertbutton">
+				<button id="converter">Click to Convert</button>
+    		</fieldset>	
+				
+			<fieldset>
+				<button id="clearButton">Click to clear the result</button> 
+			</fieldset>
+
+
+		<script src="temperature.js"></script>
+
+		</body>
+	</html>
