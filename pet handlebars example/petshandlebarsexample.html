@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Expanding Product Line</title>
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>WONDERFUL CHOW</h1>
+  </header>
+  <script id="dog-template" type="text/x-handlebars-template">
+    <div>
+      {{#each dog_brands}}
+        <table>
+          <tr>
+            <th colspan="4">{{name}}</th>
+          </tr>
+
+          <tr>
+          {{#each types}}
+          <td colspan="2">{{type}}</td>
+          {{/each}}
+          </tr>
+
+          <tr>
+          {{#each types}}
+          {{#each volumes}}
+            <td colspan="1">{{size}}: ${{price}}</td>
+          {{/each}}
+          {{/each}}
+          </tr>
+
+        </table>
+      {{/each}}
+    </div>
+  </script>
+  <div id="dogtable"></div>
+  <script id="cat-template" type="text/x-handlebars-template">
+    <div>
+      {{#each cat_brands}}
+
+      <table>
+        <tr>
+          <th colspan="5">{{name}}</th>
+        </tr>
+        <tr>
+          <td colspan="5">{{breeds}}</td>
+        </tr>
+        <tr>
+        {{#each volumes}}
+          <td colspan="1">{{types}}</td>
+        {{/each}}
+        </tr>
+        <tr>
+        {{#each volumes}}
+          <td colspan="1">{{size}}: {{price}}</td>
+        {{/each}}
+        </tr>
+      </table>
+
+      {{/each}}
+    </div>
+  </script>
+  <div id="cattable"></div>
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="./bower_components/handlebars/handlebars.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html> 
